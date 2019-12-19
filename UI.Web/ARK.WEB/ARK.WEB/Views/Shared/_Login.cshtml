@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<!-- begin::Head -->
+<head>
+
+    <!--begin::Base Path (base relative path for assets of this page) -->
+    <base href="../../../../">
+
+    <!--end::Base Path -->
+    <meta charset="utf-8" />
+    <title>Metronic | Login Page v3</title>
+    <meta name="description" content="Login page example">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--begin::Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!--end::Fonts -->
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link href="~/assets/css/demo11/pages/login/login-3.css" rel="stylesheet" />
+
+    <!--end::Page Custom Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="~/assets/vendors/global/vendors.bundle.css" rel="stylesheet" />
+    <link href="~/assets/css/demo11/style.bundle.css" rel="stylesheet" />
+
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="./assets/css/demo11/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/demo11/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/demo11/skins/brand/dark.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/demo11/skins/aside/dark.css" rel="stylesheet" type="text/css" />
+
+    <!--end::Layout Skins -->
+    <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    @Html.AntiForgeryToken()
+    @{IgnoreBody();}
+    @await Component.InvokeAsync("Login")
+</body>
+<!-- end::Body -->
+</html>

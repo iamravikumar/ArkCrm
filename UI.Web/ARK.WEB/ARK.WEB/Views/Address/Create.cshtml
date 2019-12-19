@@ -1,0 +1,624 @@
+﻿
+@{
+    ViewData["Title"] = "Create Customer";
+}
+@section Styles{
+
+}
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+    <!-- BEGIN: Subheader -->
+    <div class="m-subheader ">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator">
+                    Adres Ekle
+                </h3>
+                <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                    <li class="m-nav__item m-nav__item--home">
+                        <a href="#" class="m-nav__link m-nav__link--icon">
+                            <i class="m-nav__link-icon la la-home"></i>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                Forms
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                Form Validation
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                Form Controls
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                    <a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+                        <i class="la la-plus m--hide"></i>
+                        <i class="la la-ellipsis-h"></i>
+                    </a>
+                    <div class="m-dropdown__wrapper">
+                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                        <div class="m-dropdown__inner">
+                            <div class="m-dropdown__body">
+                                <div class="m-dropdown__content">
+                                    <ul class="m-nav">
+                                        <li class="m-nav__section m-nav__section--first m--hide">
+                                            <span class="m-nav__section-text">
+                                                Quick Actions
+                                            </span>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                <span class="m-nav__link-text">
+                                                    Activity
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                <span class="m-nav__link-text">
+                                                    Messages
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                <span class="m-nav__link-text">
+                                                    FAQ
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                <span class="m-nav__link-text">
+                                                    Support
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                        <li class="m-nav__item">
+                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                Submit
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="m-form m-form--fit m-form--label-align-right">
+
+                    <div class="m-portlet">
+                        <div class="m-portlet__head">
+                            <div class="m-portlet__head-caption">
+                                <div class="m-portlet__head-title">
+                                    <span class="m-portlet__head-icon m--hide">
+                                        <i class="la la-gear"></i>
+                                    </span>
+                                    <h3 class="m-portlet__head-text">
+                                        Adres ve Kampanya Bilgileri
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-portlet__body">
+                            <div class="m-form__section m-form__section--first">
+                                <div class="m-form__heading">
+                                    <h3 class="m-form__heading-title">
+                                        Kurulum ve Fatura Adresi
+                                    </h3>
+                                </div>
+
+                                <div class="form-group m-form__group row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                                        <label for="example_input_full_name">
+                                            Adresi Tanımlanan Kişi/Firma Bilgisi(kişi/firma ismi yazınız)
+                                        </label>
+                                        <input type="text" class="form-control m-input" placeholder="Kişi/Firma ismi yazınız">
+                                        <input type="hidden" value="" id="firmaId" />
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group m-form__group row">
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Ülke
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option value="1">Türkiye  </option>
+                                            <option value="2">Almanya</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            İl
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Antalya  </option>
+                                            <option>Adana</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            İlçe
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Bucak
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Köy
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Mahalle
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Cadde/Sokak
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Bina
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Daire
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+
+                                        <label for="example_input_full_name">
+                                            Kat No
+                                        </label>
+                                        <input type="text" class="form-control m-input" placeholder="Posta Kodu">
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+
+                                        <label for="example_input_full_name">
+                                            Posta Kodu
+                                        </label>
+                                        <input type="text" class="form-control m-input" placeholder="Posta Kodu">
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group m-form__group row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                                        <label for="example_input_full_name">
+                                            Tam Adres
+                                        </label>
+                                        <input type="text" class="form-control m-input" placeholder="Tam Adres bu alanda görünür" readonly>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="m-form__seperator m-form__seperator--dashed"></div>
+                                <div class="form-group"></div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="m-portlet">
+
+                        <div class="m-portlet__body">
+                            <div class="m-form__section m-form__section--first">
+                                <div class="m-form__heading">
+                                    <h3 class="m-form__heading-title">
+                                        Kampanya Seçimi
+                                    </h3>
+                                </div>
+
+                                <div class="form-group m-form__group row">
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Abone Türü
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option value="1">Türkiye  </option>
+                                            <option value="2">Almanya</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Güvenli İnternet Profili
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Antalya  </option>
+                                            <option>Adana</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Kampanya Kodu
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Tarife Türü
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Paket Türü
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Servis verilebilirlik maksimum hız
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Paket Hız Türü
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            İş Türü
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Alt İş Türü
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Taksit Süresi
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            XDSL Alınacak Yer
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Taksit Süresi
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Statik IP İsteniyor mu?
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Taksit Süresi
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            XDSL Kullanıcı Adı
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            XDSL Kullanıcı Şifre
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <label>
+                                            Randevu Talep
+                                        </label>
+                                        <select class="form-control m-bootstrap-select m_selectpicker" data-live-search="true" id="building">
+                                            <option selected>Seciniz</option>
+                                            <option>Deneme1  </option>
+                                            <option>Deneme2</option>
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="m-form__seperator m-form__seperator--dashed"></div>
+                                <div class="form-group"></div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                        <div class="m-form__actions m-form__actions--solid">
+                            <button type="reset" class="btn btn-success">
+                                Submit
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*
+        <script src='https://unpkg.com/tesseract.js@v2.0.0-alpha.10/dist/tesseract.min.js'></script>
+        <form>
+        <input type="text" id="url" placeholder="Image URL" />
+        <input type="button" id="go_button" value="Run" />
+        <div id="ocr_results"> </div>
+        <div id="ocr_status"> </div>
+    </form>
+
+
+    @section Scripts
+        {
+        <script>
+
+
+            function runOCR(url) {
+                var t = new Tesseract.TesseractWorker();
+                t.recognize("/img/inputTesseract.png")
+                    .then(function (result) {
+                        document.getElementById("ocr_results")
+                            .innerText = result.text;
+                    }).progress(function (result) {
+                        document.getElementById("ocr_status")
+                            .innerText = result["status"] + " (" +
+                            (result["progress"] * 100) + "%)";
+                    });
+            }
+
+
+            document.getElementById("go_button")
+                .addEventListener("click", function (e) {
+                    var url = document.getElementById("url").value;
+                    runOCR(url);
+                });
+        </script>
+    }*@
+
+<!--end::Portlet-->
+<!--begin::Portlet-->
+@section Scripts{
+
+    <script src="~/themes/assets/demo/default/custom/components/forms/widgets/bootstrap-select.js"></script>
+    <script src="~/themes/assets/demo/default/custom/components/forms/widgets/bootstrap-datetimepicker.js"></script>
+    <script src="~/themes/assets/demo/default/custom/components/forms/validation/form-controls.js"></script>
+    <script src="~/themes/assets/demo/default/custom/components/forms/widgets/bootstrap-datepicker.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/customCall.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            //$("div#kurumsal_row").hide();
+            //$("#bireysel_yabanci_row").hide();
+        });
+                                //$('#membershipType').change(function () {
+                                //    deger = $(this).val();
+                                //    if (deger == "Seciniz") {
+                                //        $("#bireysel_yabanci_row").hide();
+                                //        $("div#kurumsal_row").hide();
+                                //    }
+                                //    else if (deger == 2) {
+                                //        $("div#kurumsal_row").show();
+                                //        $("#bireysel_yabanci_row").hide();
+                                //    }
+                                //    else if (deger == 1 || deger == 3) {
+                                //        $("#bireysel_yabanci_row").show();
+                                //        $("div#kurumsal_row").hide();
+                                //    }
+
+                                //});
+
+
+
+
+
+    </script>
+}

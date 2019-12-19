@@ -1,0 +1,574 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <link href="~/assets/css/demo11/pages/wizard/wizard-4.css" rel="stylesheet" />
+
+}
+
+<!-- begin:: Content Head -->
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-container  kt-container--fluid ">
+        <div class="kt-subheader__main">
+
+            <h3 class="kt-subheader__title">
+                Yeni Satış
+            </h3>
+
+            <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+
+            <div class="kt-subheader__group" id="kt_subheader_search">
+                <span class="kt-subheader__desc" id="kt_subheader_total">
+                    Enter user details and submit
+                </span>
+
+            </div>
+
+        </div>
+        <div class="kt-subheader__toolbar">
+
+            <a href="/metronic/preview/demo11/#.html" class="btn btn-default btn-bold">
+
+                Back
+            </a>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-brand btn-bold">
+
+                    Submit
+                </button>
+                <button type="button" class="btn btn-brand btn-bold dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <ul class="kt-nav">
+                        <li class="kt-nav__item">
+                            <a href="#" class="kt-nav__link">
+                                <i class="kt-nav__link-icon flaticon2-writing"></i>
+                                <span class="kt-nav__link-text">Save &amp; continue</span>
+                            </a>
+                        </li>
+                        <li class="kt-nav__item">
+                            <a href="#" class="kt-nav__link">
+                                <i class="kt-nav__link-icon flaticon2-medical-records"></i>
+                                <span class="kt-nav__link-text">Save &amp; add new</span>
+                            </a>
+                        </li>
+                        <li class="kt-nav__item">
+                            <a href="#" class="kt-nav__link">
+                                <i class="kt-nav__link-icon flaticon2-hourglass-1"></i>
+                                <span class="kt-nav__link-text">Save &amp; exit</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end:: Content Head -->
+<!-- begin:: Content -->
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+    <div class="kt-wizard-v4" id="kt_apps_user_add_user" data-ktwizard-state="step-first">
+        <!--begin: Form Wizard Nav -->
+        <div class="kt-wizard-v4__nav">
+            <div class="kt-wizard-v4__nav-items nav">
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step" data-ktwizard-state="current">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            1
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Profil
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Kişisel Bilgiler
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            2
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Adres
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Adres Bilgileri
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            3
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Kampanya
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                AL-SAT Kampanya Bilgileri
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="kt-wizard-v4__nav-item nav-item" href="#" data-ktwizard-type="step">
+                    <div class="kt-wizard-v4__nav-body">
+                        <div class="kt-wizard-v4__nav-number">
+                            4
+                        </div>
+                        <div class="kt-wizard-v4__nav-label">
+                            <div class="kt-wizard-v4__nav-label-title">
+                                Özet Ekranı
+                            </div>
+                            <div class="kt-wizard-v4__nav-label-desc">
+                                Önizleme ve Onaylama Ekranı
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--end: Form Wizard Nav -->
+
+        <div class="kt-portlet">
+            <div class="kt-portlet__body kt-portlet__body--fit">
+                <div class="kt-grid">
+                    <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
+                        <!--begin: Form Wizard Form-->
+                        <form class="kt-form" id="kt_apps_user_add_user_form">
+
+                            <!--begin: Form Wizard Step 1-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+                                <div class="kt-heading kt-heading--md">Kişi Bilgileri Detayları</div>
+                                <div class="kt-section kt-section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group row">
+                                                    <label class="col-xl-3 col-lg-3 col-form-label">Kaydı Gönder</label>
+                                                    <div class="col-lg-9 col-xl-9">
+                                                        <label class="kt-radio kt-radio--bold kt-radio--success">
+                                                            <input type="radio" name="_sendTTorNot"> TT'ye Gönder
+                                                            <span></span>
+                                                        </label>
+                                                        &nbsp;&nbsp;&nbsp;
+                                                        <label class="kt-radio kt-radio--bold kt-radio--success">
+                                                            <input type="radio" name="_sendTTorNot"> TT'ye Gönderme
+                                                            <span></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-xl-3 col-lg-3 col-form-label">TC Kimlik No</label>
+                                                    <div class="col-6">
+                                                        <input id="_tcknNo" class="form-control" type="tel" placeholder="TC Kimlik no giriniz">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <button id="_tcknQuery" type="submit" class="btn btn-outline-success btn-elevate"><i class="la la-user"></i> Sorgula</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="kt-widget kt-widget--user-profile-1">
+                                                    <div class="kt-widget__body">
+                                                        <div class="kt-widget__content">
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">İsim Soyisim:</span>
+                                                                <a href="#" class="kt-widget__data">matt@fifestudios.com</a>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">E-posta Adresi:</span>
+                                                                <a href="#" class="kt-widget__data">44(76)34254578</a>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Cep Telefonu:</span>
+                                                                <a href="#" class="kt-widget__data">44(76)34254578</a>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Üyelik Tipi:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Kimlik Tipi:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">TC No:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Doğum Tarihi:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Cinsiyet:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Anne Adı:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Baba Adı:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="kt-widget kt-widget--user-profile-1">
+                                                    <div class="kt-widget__body">
+                                                        <div class="kt-widget__content">
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">İsim Soyisim:</span>
+                                                                <a href="#" class="kt-widget__data">matt@fifestudios.com</a>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">E-posta Adresi:</span>
+                                                                <a href="#" class="kt-widget__data">44(76)34254578</a>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Cep Telefonu:</span>
+                                                                <a href="#" class="kt-widget__data">44(76)34254578</a>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Üyelik Tipi:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Kimlik Tipi:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">TC No:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Doğum Tarihi:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Cinsiyet:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Anne Adı:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                            <div class="kt-widget__info">
+                                                                <span class="kt-widget__label">Baba Adı:</span>
+                                                                <span class="kt-widget__data">Melbourne</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Form Wizard Step 1-->
+                            <!--begin: Form Wizard Step 2-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Kurulum ve Fatura Adres Bilgisi</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <label>Ülke:</label>
+                                                <select id="_addressNationality" name="_addressNationality" class="form-control">
+                                                    <option value="">Ülke seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>İl:</label>
+                                                <select id="_addressCity" name="_addressCity" class="form-control">
+                                                    <option value="">İl seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>İlçe:</label>
+                                                <select id="_addressDistrict" name="_addressDistrict" class="form-control">
+                                                    <option value="">İlçe seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Bucak:</label>
+                                                <select id="_addressTownship" name="_addressTownship" class="form-control">
+                                                    <option value="">Bucak seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Köy:</label>
+                                                <select id="_addressVillage" name="_addressVillage" class="form-control">
+                                                    <option value="">Köy seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Mahalle:</label>
+                                                <select id="_addressQuarter" name="_addressQuarter" class="form-control">
+                                                    <option value="">Mahalle seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Cadde/Sokak:</label>
+                                                <select id="_addressCsbm" name="_addressCsbm" class="form-control">
+                                                    <option value="">Cadde/sokak seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Bina:</label>
+                                                <select id="_addressBuilding" name="_addressBuilding" class="form-control">
+                                                    <option value="">Bina seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Daire:</label>
+                                                <select id="_addressBB" name="_addressBB" class="form-control">
+                                                    <option value="">Daire seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Kat No:</label>
+                                                <input id="_addressFlatNo" name="_addressFlatNo" type="text" class="form-control" placeholder="Kat no giriniz...">
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label>Posta Kodu:</label>
+                                                <input id="_addressPostCode" name="_addressPostCode" type="text" class="form-control" placeholder="Posta kodu giriniz...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Form Wizard Step 2-->
+                            <!--begin: Form Wizard Step 3-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+                                <div class="kt-heading kt-heading--md">Setup Your Address</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__form">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>XDSL No (TT Hizmet No)</label>
+                                                    <input id="_xdslNo" name="_xdslNo" type="text" class="form-control" placeholder="XDSL no giriniz">
+                                                    <span class="form-text text-muted">Please enter your Postcode.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>PSTN No (Telefon No)</label>
+                                                    <input id="_pstnNo" type="text" class="form-control" name="_pstnNo" placeholder="PSTN no giriniz...">
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Abone Türü</label>
+                                                    <select id="_retailerSaleChannel" name="_retailerSaleChannel" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Güvenli İnternet Profili</label>
+                                                    <select id="_secureInternetProfile" name="_secureInternetProfile" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Kampanya</label>
+                                                    <select id="_campaign" name="_campaign" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Hız</label>
+                                                    <select id="_speed" name="_speed" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Hız Detay</label>
+                                                    <select id="_speedDetail" name="_speedDetail" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Taksit Süresi</label>
+                                                    <select id="_campaignInstallmentPeriod" name="_campaignInstallmentPeriod" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>İş Türü</label>
+                                                    <select id="_businessType" name="_businessType" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Alt İş Türü</label>
+                                                    <select id="_businessSubType" name="_businessSubType" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Statik IP İsteniyor mu?</label>
+                                                    <select id="_staticIPRequest" name="_staticIPRequest" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>XDSL Alınacak Yer</label>
+                                                    <select id="_xdslPlacementLocation" name="_xdslPlacementLocation" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>XDSL Kullanıcı Adı</label>
+                                                    <input id="_xdslUsername" name="_xdslUsername" type="text" class="form-control" placeholder="Xdsl kullanıcı adı giriniz...">
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>Domain</label>
+                                                    <select id="_domain" name="_domain" class="form-control">
+                                                        <option value="">Select</option>
+                                                    </select>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>XDSL Şifre</label>
+                                                    <input id="_xdslPassword" name="_xdslPassword" type="text" class="form-control" placeholder="Xdsl şifre giriniz...">
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label>TT Müşteri No</label>
+                                                    <input id="_ttCustomerNo" name="_ttCustomerNo" type="text" class="form-control m-input" placeholder="TT Müşteri No" disabled>
+                                                    <span class="form-text text-muted">Please enter your City.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Form Wizard Step 3-->
+                            <!--begin: Form Wizard Step 4-->
+                            <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                <div class="kt-heading kt-heading--md">Review your Details and Submit</div>
+                                <div class="kt-form__section kt-form__section--first">
+                                    <div class="kt-wizard-v4__review">
+                                        <div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Your Account Details
+                                            </div>
+                                            <div class="kt-wizard-v4__review-content">
+                                                John Wick
+                                                <br /> Phone: +61412345678
+                                                <br /> Email: johnwick@reeves.com
+                                            </div>
+                                        </div>
+                                        <div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Your Address Details
+                                            </div>
+                                            <div class="kt-wizard-v4__review-content">
+                                                Address Line 1
+                                                <br /> Address Line 2
+                                                <br /> Melbourne 3000, VIC, Australia
+                                            </div>
+                                        </div>
+                                        <div class="kt-wizard-v4__review-item">
+                                            <div class="kt-wizard-v4__review-title">
+                                                Payment Details
+                                            </div>
+                                            <div class="kt-wizard-v4__review-content">
+                                                Card Number: xxxx xxxx xxxx 1111
+                                                <br /> Card Name: John Wick
+                                                <br /> Card Expiry: 01/21
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end: Form Wizard Step 4-->
+                            <!--begin: Form Actions -->
+                            <div class="kt-form__actions">
+                                <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold" data-ktwizard-type="action-prev">
+                                    Geri Dön
+                                </div>
+                                <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold" data-ktwizard-type="action-submit">
+                                    Kaydet
+                                </div>
+                                <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold" data-ktwizard-type="action-next">
+                                    Devam Et
+                                </div>
+                            </div>
+                            <!--end: Form Actions -->
+                        </form>
+                        <!--end: Form Wizard Form-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end:: Content -->
+
+
+@section Scripts {
+    <script src="~/assets/js/demo11/pages/custom/user/add-user.js"></script>
+
+    <script>
+        $("#_cell_phone_1").inputmask("mask", { "mask": "(999) 999-9999" });
+        $("#_cell_phone_2").inputmask("mask", { "mask": "(999) 999-9999" });
+    </script>
+}
